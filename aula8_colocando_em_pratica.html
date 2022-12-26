@@ -1,0 +1,32 @@
+<meta charset="UTF-8">
+
+<h1>O foco da aula 8 foi a interação com o mundo JavaScript</h1>
+<h3>Nessa aula aprendemos a interagir de maneira diferente com o usuário, utilizando para isso "input" e "button", como no exemplo abaixo.</h3>
+Para acessar a aula 8, clique <a href="https://cursos.alura.com.br/course/logica-programacao-javascript-html/task/17763">aqui.</a><br><br><hr><br><br> 
+
+<input/> 
+<button>Compare com o meu segredo</button>
+
+<script>
+
+	var segredo = 5;
+	
+	var input = document.querySelector("input"); 
+	input.focus();
+
+	function verifica(){
+
+		if (input.value == segredo){
+			alert("Você acertou!!!");
+		} else {
+			alert("Você errou!");
+		}
+		input.value = "";
+		input.focus();
+
+	}
+
+	var button = document.querySelector("button");
+	button.onclick = verifica; 
+
+</script>

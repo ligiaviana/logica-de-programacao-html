@@ -1,0 +1,40 @@
+<meta charset= "UTF-8">
+
+<h1>O foco da aula 6 foram as operações lógicas e a condição If e Else.</h1>
+<h3>As operações lógicas (" > ; < ; && ; || ") são muito importantes porque é possível deixar o programa mais inteligente com a sua utilização. A condição If e Else possibilita trabalhar com lógica e praticidade, como no exemplo abaixo.</h3>
+
+Para acessar a aula 6, clique <a href="https://cursos.alura.com.br/course/logica-programacao-javascript-html/task/22461">aqui</a><br><br><hr><br><br>
+
+<script>
+	
+	function pulaLinha(){
+		document.write("<br>");
+	}
+
+	function mostra(frase){
+		document.write(frase);
+		pulaLinha();
+	}
+
+	function sorteia(n){
+		return Math.round(Math.random(n)*100);
+	}
+
+	var numeroPensado = sorteia(10);
+	console.log(numeroPensado)
+	var chute = parseInt(prompt("Digite seu número"));
+
+	if(numeroPensado == chute) {
+		mostra("Você acertou! O número pensado foi: " + numeroPensado);
+	} else {
+
+		if(chute > numeroPensado) {
+			mostra("Você errou, seu número é maior que o número pensado")
+		} else {
+			mostra("Você errou, seu número é menor que o número pensado")
+		}
+
+	}
+
+</script>
+

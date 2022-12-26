@@ -1,0 +1,37 @@
+<meta charset="UTF-8">
+
+<h1>O foco da aula 7 foram as estruturas de repetição While e For.</h1>
+<h3>As estruturas de repetição são muito importantes porque possibilitam automatizar tarefas, evitando a repetição de códigos. É necessário utilizar um contador na estrutura, adicionado ao incremento ou decremento, dependendo do que desejo executar, como no exemplo abaixo.</h3>
+Para acessar a aula 7, clique <a href="https://cursos.alura.com.br/course/logica-programacao-javascript-html/task/17737">aqui</a><br><br><hr><br><br>
+
+<script>
+	
+function pulaLinha(){
+	document.write("<br><br>")
+}
+
+function mostra(frase){
+	document.write(frase)
+	pulaLinha()
+}
+
+var numeroPensado = Math.round(Math.random()*10);
+var tentativas = 1
+
+while(tentativas <= 3){
+
+	var chute = parseInt(prompt("Digite um número")); 
+
+	if(chute == numeroPensado){
+		mostra("Você ACERTOU! O número pensado é " + numeroPensado);
+		break
+
+	} else {
+		mostra("Você ERROU! :(")
+	}
+	tentativas ++
+}
+
+mostra("FIM")
+
+</script>
